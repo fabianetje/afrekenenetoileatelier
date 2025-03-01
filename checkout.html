@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afrekenen</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Voeg hier je eigen CSS-bestand toe -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Afrekenen</h1>
+        <nav>
+            <a href="index.html">Home</a> | 
+            <a href="cart.html">Winkelwagen</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cart-summary">
+            <h2>Jouw winkelwagen</h2>
+            <div class="cart-items"></div>
+            <div class="total-price">Totaal: €0,00</div>
+        </section>
+
+        <section class="checkout-form">
+            <h2>Jouw gegevens</h2>
+            <form id="checkout-form">
+                <label for="name">Naam:</label>
+                <input type="text" id="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+
+                <label for="address">Adres:</label>
+                <input type="text" id="address" required>
+
+                <button type="button" class="checkout-button">AFREKENEN</button> <!-- Verander naar type="button" -->
+            </form>
+        </section>
+
+        
+    </main>
+
+    <footer>
+        <div class="payment-options">
+            <div class="payment-icons">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-paypal"></i>
+                <img src="images/iDEAL.png" alt="iDEAL"/>
+            </div>
+        </div>
+        <p>&copy; 2025 Étoile Atelier - Alle rechten voorbehouden</p>
+    </footer>
+
+    <!-- Pop-up Overlay -->
+    <div id="checkout-popup" class="popup-overlay">
+        <div class="popup">
+            <h2>Bevestig je bestelling</h2>
+            <p>Ben je zeker van je aankoop?</p>
+            <div class="popup-buttons">
+                <button id="cancel-checkout" class="cancel-btn">Annuleren</button>
+                <button id="confirm-checkout" class="confirm-btn">Bevestig</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="checkout.js"></script> <!-- Voeg hier je JS-bestand toe -->
+</body>
+</html>
